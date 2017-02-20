@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="UiController" Height="665.625" Width="1051.562" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid Margin="0,0,2.8,-0.4">
-        <Grid x:Name="GridLayout1" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="1022">
-            <Button x:Name="Connect_Arduino" Content="Connect" HorizontalAlignment="Left" Margin="937,10,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Arduino_Click"/>
+        <Grid x:Name="GridLayout1" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="1039" Margin="3,0,0,0">
+            <Button x:Name="Connect_Arduino" Content="Connect" HorizontalAlignment="Left" Margin="858,10,0,0" VerticalAlignment="Top" Width="155" Click="Connect_Arduino_Click" Height="37" FontSize="18" FontWeight="Bold"/>
         </Grid>
-        <Grid x:Name="GridLayout3" HorizontalAlignment="Left" Height="247" Margin="10,72,0,0" VerticalAlignment="Top" Width="1012">
+        <Grid x:Name="GridLayout3" HorizontalAlignment="Left" Height="327" Margin="10,62,0,0" VerticalAlignment="Top" Width="1032">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="49*"/>
+            </Grid.ColumnDefinitions>
             <Label x:Name="label" Content="Choose pattern
-                   " HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="101"/>
-            <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="120,27,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="onPatternSelectionChanged" Height="25" >
+                   " HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="145" Height="53" FontSize="18" FontWeight="Bold"/>
+            <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="176,27,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="onPatternSelectionChanged" Height="36" FontSize="18" >
                 <ComboBoxItem >
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Red">IntenseRain</TextBlock>
@@ -30,16 +34,11 @@
                     </StackPanel>
                 </ComboBoxItem>
             </ComboBox>
-            <Label x:Name="PresenceLabel" Background="{Binding}" HorizontalAlignment="Left" Margin="905,10,0,0" VerticalAlignment="Top" Height="70" Width="97" RenderTransformOrigin="1.43,0.51"/>
-            <TextBlock x:Name="ReadingsBlock" HorizontalAlignment="Left" Margin="905,112,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="68" Width="97"/>
+            <Label x:Name="PresenceLabel" Background="{Binding}" HorizontalAlignment="Left" Margin="214,27,0,0" VerticalAlignment="Top" Height="107" Width="148" RenderTransformOrigin="1.43,0.51" Grid.Column="1"/>
+            <TextBlock x:Name="ReadingsBlock" HorizontalAlignment="Left" Margin="214,175,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="107" Width="148" Grid.Column="1"/>
         </Grid>
-        <DataGrid x:Name="dataGrid1" Margin="0,346,-10.2,0" VerticalAlignment="Top" Height="0" RenderTransformOrigin="0.508,0.485" >
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{Binding ID}" ClipboardContentBinding="{x:Null}" Header="ID"/>
-                <DataGridCheckBoxColumn Binding="{Binding Message}" ClipboardContentBinding="{x:Null}" Header="Message"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <ListView x:Name="listViewBinding" HorizontalAlignment="Left" Height="229" Margin="0,404,0,0" VerticalAlignment="Top" Width="1035">
+
+        <ListView x:Name="listViewBinding" HorizontalAlignment="Left" Height="229" Margin="0,404,0,0" VerticalAlignment="Top" Width="1035" FontSize="18">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
