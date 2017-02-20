@@ -1,0 +1,1 @@
+C:\Users\ULabFDH\Documents\Visual Studio 2013\Projects\PresenceDetector\AnwesenheitUndBewegung aktuell\AnwesenheitUndBewegung\bin\x86\Debug\AnwesenheitUndBewegung.exe.config

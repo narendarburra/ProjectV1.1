@@ -1,0 +1,3 @@
+C:\Users\ULabFDH\Documents\Visual Studio 2013\Projects\PresenceDetector\AnwesenheitUndBewegung aktuell\AnwesenheitUndBewegung\obj\x86\Release\App.g.cs
+C:\Users\ULabFDH\Documents\Visual Studio 2013\Projects\PresenceDetector\AnwesenheitUndBewegung aktuell\AnwesenheitUndBewegung\obj\x86\Release\AnwesenheitUndBewegung_MarkupCompile.cache
+C:\Users\ULabFDH\Documents\Visual Studio 2013\Projects\PresenceDetector\AnwesenheitUndBewegung aktuell\AnwesenheitUndBewegung\bin\x86\Release\AnwesenheitUndBewegung.exe.config

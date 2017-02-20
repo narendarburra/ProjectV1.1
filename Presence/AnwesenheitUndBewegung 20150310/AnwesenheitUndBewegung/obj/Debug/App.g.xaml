@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<a:App StartupUri="MainWindow.xaml" xmlns:a="clr-namespace:AnwesenheitUndBewegung;assembly=AnwesenheitUndBewegung" />

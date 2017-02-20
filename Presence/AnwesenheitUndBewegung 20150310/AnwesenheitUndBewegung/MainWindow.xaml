@@ -1,0 +1,62 @@
+﻿<Window x:Class="AnwesenheitUndBewegung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src ="clr-namespace:AnwesenheitUndBewegung"
+        Title="Presence Detector" Height="300" Width="500" Loaded="WindowLoaded" Closing="WindowClosing">
+
+    <Grid Name="visGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Width="100" Grid.Row="0" Grid.Column="3" SelectedIndex="{Binding Path=UserId}">
+            <Label Content="not logged in"/>
+            <Label Content="User1"/>
+            <Label Content="User2"/>
+            <Label Content="User3"/>
+        </ComboBox>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Center" Text="Presence"/>
+            <Label x:Name="presenceLabel" Margin="5,0,5,5" Height="50" Width="50" Background="{Binding}"></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Center" Text="Movement"/>
+            <Label x:Name="movementLabel" Margin="5,0,5,5" Height="50" Width="50" Background="{Binding}"></Label>
+        </StackPanel>
+        
+
+        <TextBlock Margin="20" Grid.Row="1" Grid.Column="1" Text="{Binding Path=AbsentText}"/>
+        <TextBlock Margin="20" Grid.Row="2" Grid.Column="1" Text="{Binding Path=NoMovementText}"/>
+
+
+        <StackPanel Margin="20" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock  Height ="20" Width="200" VerticalAlignment="Top" Text="Allowed time absent in minutes:"/>
+            <TextBox Height="20" VerticalAlignment="Top" Text="{Binding Path=AcceptedTimeAbsent}"/>
+        </StackPanel>
+        <StackPanel Margin="20" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock  Height ="20" Width="200" VerticalAlignment="Top" Text="Allowed time not moving in minutes:"/>
+            <TextBox Height ="20" VerticalAlignment="Top" Text="{Binding Path=AcceptedTimeNotMoving}"/>
+        </StackPanel>
+
+        <StackPanel Margin="20" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock  Height ="20" Width="200" VerticalAlignment="Top" Text="Time until notification in minutes:"/>
+            <TextBox Height ="20" VerticalAlignment="Top" Text="{Binding Path=TimeUntilNotification}"/>
+        </StackPanel>
+
+        <StackPanel Margin="20" Grid.Row="3" Grid.ColumnSpan="2">
+            <TextBlock Text="{Binding Path=WarningSentText}"/>
+            <TextBlock Text="{Binding Path=NotificationSentText}"/>
+        </StackPanel>
+    </Grid>
+</Window>
