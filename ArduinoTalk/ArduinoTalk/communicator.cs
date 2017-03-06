@@ -11,7 +11,7 @@ namespace ArduinoTalk
     {
         public string port = "";
         static SerialPort currentPort;
-
+        private int X = 2 ;
         /* Function to establish connection between Arduino and C# application
          * It sends a message "I am Arduino" to all the available COM ports 
          * Port will be choosen based on  Echo message from Arduino 
@@ -24,7 +24,7 @@ namespace ArduinoTalk
             try
             {
 
-                byte[] buffer = new byte[3];
+                byte[] buffer = new byte[3]; 
                 buffer[0] = Convert.ToByte(paramone);
                 buffer[1] = Convert.ToByte(paramtwo);
                 buffer[2] = Convert.ToByte(paramthree);
@@ -95,7 +95,10 @@ namespace ArduinoTalk
                     count--;
                 }
                 currentPort.Close();
+                ExcelUpdate.UpdateExcel("Sheet1", X, 2, returnMessage);
+                X++;
                 return returnMessage;
+                
             }
             catch (Exception e)
             {

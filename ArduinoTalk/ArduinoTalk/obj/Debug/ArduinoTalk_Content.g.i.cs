@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("graphicloads-100-flat-home.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("arduino_icon.ico")]
 
 
