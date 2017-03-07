@@ -18,14 +18,14 @@
         </Grid>
         <Grid x:Name="GridLayout3" Height="360" Margin="0,0,-1.6,216.6" VerticalAlignment="Bottom" Background="Gray" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75*"/>
-                <ColumnDefinition Width="568*"/>
-                <ColumnDefinition Width="225*"/>
-                <ColumnDefinition Width="154*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="369*"/>
+                <ColumnDefinition Width="362*"/>
+                <ColumnDefinition Width="158*"/>
             </Grid.ColumnDefinitions>
             <Label x:Name="label" Content="Choose pattern
-                   " HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="145" Height="53" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
-            <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="89.8,27,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="onPatternSelectionChanged" Height="36" FontSize="18" Grid.Column="1" >
+                   " HorizontalAlignment="Left" Margin="15,27,0,0" VerticalAlignment="Top" Width="145" Height="43" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="60.4,29,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="onPatternSelectionChanged" Height="36" FontSize="18" Grid.Column="1" >
                 <ComboBox.Foreground>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
                 </ComboBox.Foreground>
@@ -53,8 +53,8 @@
                     </StackPanel>
                 </ComboBoxItem>
             </ComboBox>
-            <Label x:Name="PresenceLabel" Background="{Binding}" HorizontalAlignment="Left" Margin="5,27,0,0" VerticalAlignment="Top" Height="107" Width="148" RenderTransformOrigin="1.43,0.51" Grid.Column="3"/>
-            <TextBlock x:Name="ReadingsBlock" HorizontalAlignment="Left" Margin="0,173,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="107" Width="148" Grid.Column="3"/>
+            <Label x:Name="PresenceLabel" Background="{Binding}" HorizontalAlignment="Left" Margin="4.4,27,0,0" VerticalAlignment="Top" Height="107" Width="148" RenderTransformOrigin="1.43,0.51" Grid.Column="3"/>
+            <TextBlock x:Name="ReadingsBlock" HorizontalAlignment="Left" Margin="225.8,173,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="107" Width="148" Grid.Column="2" Grid.ColumnSpan="2"/>
         </Grid>
 
         <ListView x:Name="listViewBinding" HorizontalAlignment="Left" Height="217" Margin="0,415,-1.6,-0.4" VerticalAlignment="Top" Width="1040" FontSize="18" Background="Gray" Grid.ColumnSpan="2">
